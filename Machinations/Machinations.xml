@@ -1,0 +1,18 @@
+<graph version="v4.05" name="" author="" interval="1" timeMode="asynchronous" distributionMode="fixed speed" speed="100" actions="1" dice="D6" skill="" strategy="" multiplayer="" width="600" height="560" numberOfRuns="100" visibleRuns="25" colorCoding="0">
+  <connection type="Resource Connection" start="11" end="15" label="100" position="0.5" color="Black" thickness="3"/>
+  <connection type="Resource Connection" start="15" end="14" label="20" position="0.5" color="Black" thickness="3"/>
+  <connection type="Resource Connection" start="7" end="8" label="10" position="0.5" color="Black" thickness="3"/>
+  <connection type="Resource Connection" start="8" end="11" label="10" position="0.5" color="Black" thickness="3"/>
+  <connection type="Resource Connection" start="15" end="13" label="" position="0.5" color="Black" thickness="3"/>
+  <connection type="Resource Connection" start="13" end="7" label="" position="0.5" color="Black" thickness="2"/>
+  <node symbol="TextLabel" x="55" y="24" color="Black" caption="time based"/>
+  <node symbol="Source" x="46" y="64" color="Black" caption="recharge area" thickness="3" captionPos="0.25" activationMode="interactive" pullMode="pull any" actions="1" resourceColor="Black"/>
+  <node symbol="Pool" x="43" y="210" color="Black" caption="charge %" thickness="3" captionPos="0.25" activationMode="passive" pullMode="push any" actions="10" resourceColor="Black" startingResources="100" capacity="100"/>
+  <node symbol="EndCondition" x="39" y="310" color="Black" caption="loss" thickness="3" captionPos="0.25" activationMode="passive" pullMode="pull any" actions="1"/>
+  <connection type="State Connection" start="8" end="9" label="==0 || enemy collision" position="-0.43" color="Black" thickness="3"/>
+  <node symbol="Converter" x="180" y="209" color="Black" caption="magnetic force" thickness="3" captionPos="0.25" activationMode="interactive" pullMode="pull all" actions="1" resourceColor="Black"/>
+  <node symbol="TextLabel" x="312" y="276" color="Black" caption="Pushing or Pulling"/>
+  <node symbol="Gate" x="305" y="72" color="Black" caption="once every 3 magnets" thickness="2" captionPos="0.75" activationMode="passive" pullMode="pull any" actions="1" gateType="skill"/>
+  <node symbol="Drain" x="417" y="207" color="Black" caption="powerloss" thickness="3" captionPos="0.25" activationMode="automatic" pullMode="pull any" actions="1"/>
+  <node symbol="Pool" x="306" y="210" color="Black" caption="charge %" thickness="3" captionPos="0.25" activationMode="passive" pullMode="pull any" actions="1" resourceColor="Black" startingResources="0" capacity="-1"/>
+</graph>
